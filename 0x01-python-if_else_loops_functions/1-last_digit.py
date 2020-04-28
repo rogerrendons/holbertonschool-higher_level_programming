@@ -14,4 +14,3 @@ elif las < 6:
     text = "and is less than 6 and not 0"
 
 print("Last digit of", number, "is", las, text)
-
