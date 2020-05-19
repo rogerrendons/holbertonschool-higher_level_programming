@@ -4,6 +4,6 @@
 
 class Square:
     """ define size Square class"""
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """ size Square to size for instance"""
-        self.__size=size
+        self.__size = size
