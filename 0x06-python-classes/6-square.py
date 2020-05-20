@@ -47,6 +47,7 @@ class Square:
 
     """ property position definition """
     @property
+    """ position definition """
     def position(self):
         return self.__position
 
