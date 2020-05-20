@@ -21,38 +21,37 @@ class Square:
     def size(self):
         return self.__size
 
-
+    """ setter size and probe if a integer """
     @size.setter
     def size(self, value):
-        """ setter size and probe if a integer """
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    """ print Square iqual to size """
     def my_print(self):
-        """ print Square iqual to size """
         if self.__size != 0:
             for a in range(self.__position[1]):
                 print()
             for a in range(self.size):
                 for b in range(self.__position[0]):
-                    print(' ', end='')
+                    print('_', end='')
                 for c in range(self.__size):
                     print('#', end='')
                 print()
         else:
             print()
 
+    """ property position definition """
     @property
     def position(self):
-        """ property position definition """
         return self.__position
 
+    """ Position """
     @position.setter
     def position(self, value):
-        """ Position """
         if type(value) is tuple:
             if len(value) != 2:
                 raise TypeError
