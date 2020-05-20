@@ -22,9 +22,8 @@ class Square:
     def size(self):
         return self.__size
 
-    """ setter size and probe if a integer """
+    """ setter size and probe if a integer"""
     @size.setter
-    """ definition size """
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -34,7 +33,6 @@ class Square:
 
     """ print Square iqual to size """
     def my_print(self):
-        """ definition print """
         if self.__size != 0:
             for a in range(self.__position[1]):
                 print("")
@@ -49,16 +47,12 @@ class Square:
 
     """ property position definition """
     @property
-    """ property position definition """
     def position(self):
-        """ return position definition """
         return self.__position
 
-    """ Position setter """
+    """ Position """
     @position.setter
-    """ Position setter """
     def position(self, value):
-        """ Position definition """
         if type(value) is tuple:
             if len(value) != 2:
                 raise TypeError
