@@ -31,7 +31,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    """ print Square iqual to size"""
+    """ print Square iqual to size """
     def my_print(self):
         if self.__size != 0:
             for a in range(self.__position[1]):
@@ -45,10 +45,12 @@ class Square:
         else:
             print("")
 
+    """ property position definition """
     @property
     def position(self):
         return self.__position
 
+    """ Position setter"""
     @position.setter
     def position(self, value):
         if type(value) is tuple:
