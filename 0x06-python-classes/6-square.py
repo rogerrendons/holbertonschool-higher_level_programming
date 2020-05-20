@@ -34,15 +34,15 @@ class Square:
     def my_print(self):
         if self.__size != 0:
             for a in range(self.__position[1]):
-                print("")
+                print()
             for a in range(self.size):
                 for b in range(self.__position[0]):
-                    print("_", end="")
+                    print('_', end='')
                 for c in range(self.__size):
-                    print('#', end="")
-                print("")
+                    print('#', end='')
+                print()
         else:
-            print("")
+            print()
 
     """ property position definition """
     @property
