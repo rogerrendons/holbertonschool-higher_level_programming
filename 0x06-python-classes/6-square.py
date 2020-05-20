@@ -5,7 +5,7 @@
 class Square:
     """ define size Square """
     def __init__(self, size=0, position=(0, 0)):
-        """ size Square to size and position for instance and probe if a integer """
+        """ size Square size and position instance and probe if a integer """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -48,7 +48,7 @@ class Square:
     """ property position definition """
     @property
     def position(self):
-         return self.__position
+        return self.__position
 
     """ Position """
     @position.setter
