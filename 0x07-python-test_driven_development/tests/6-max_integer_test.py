@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_one_element(self):
         self.assertEqual(max_integer([7]), 7)
 
-    def test_basic_negative_zero_zero(self):
+    def test_basic_negative_zero(self):
         self.assertEqual(max_integer([-8, 0]), 0)
 
     def test_basic_negative_zero_zero(self):
