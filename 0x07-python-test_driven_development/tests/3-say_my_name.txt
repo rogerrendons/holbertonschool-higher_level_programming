@@ -1,0 +1,76 @@
+The ``say_my_name`` module
+===================================
+
+Using ``say_my_name``
+-------------------------------------------------------
+
+import function_name from module_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Luck", "Skywalker")
+My name is Luck Skywalker
+
+>>> say_my_name("Luck")
+My name is Luck 
+
+>>> say_my_name("Luck", )
+My name is Luck 
+
+>>> say_my_name(, "Skywalker")
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> say_my_name("", "Skywalker")
+My name is  Skywalker
+
+>>> say_my_name("", "")
+My name is  
+
+>>> say_my_name("")
+My name is  
+
+>>> say_my_name(12, "Luck")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Luck", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(1, 2)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name(False, "Luck")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Luck", True)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Luck", "Sky", "Walker")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+
+>>> say_my_name(None, "Skywalker")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+None as last name:
+>>> say_my_name("Luck", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string

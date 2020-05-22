@@ -1,0 +1,72 @@
+The ``text_indentation`` module
+===================================
+
+Using ``text_indentation``
+-------------------------------------------------------
+
+import function_name from module_name
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(232)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation([232])
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(-232)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("salto primero? salto segundo? salto tercero")
+salto primero?
+<BLANKLINE>
+salto segundo?
+<BLANKLINE>
+salto tercero
+
+>>> text_indentation("salto primero. salto segundo. salto tercero")
+salto primero.
+<BLANKLINE>
+salto segundo.
+<BLANKLINE>
+salto tercero
+
+>>> text_indentation("salto primero? salto segundo. salto tercero: salto cuarto ")
+salto primero?
+<BLANKLINE>
+salto segundo.
+<BLANKLINE>
+salto tercero:
+<BLANKLINE>
+salto cuarto
+
+>>> text_indentation("")
+
+>>> text_indentation("salto primero. \nsalto segundo")
+salto primero.
+<BLANKLINE>
+<BLANKLINE>
+salto segundo
+
+>>> text_indentation("salto primero. /nsalto segundo")
+salto primero.
+<BLANKLINE>
+/nsalto segundo
+
+>>> text_indentation("este es mi texto")
+este es mi texto
+
+>>> text_indentation("mi. texto")
+mi.
+<BLANKLINE>
+texto
+
+>>> text_indentation("text", 1)
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
