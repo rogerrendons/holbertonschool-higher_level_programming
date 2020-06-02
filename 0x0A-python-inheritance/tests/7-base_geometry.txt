@@ -1,0 +1,46 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+ValueError: my_int must be greater than 0
+
+>>> bg.integer_validator("width", "banana")
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+>>> bg.integer_validator("hola1", 10)
+>>> bg.integer_validator("hola2", -1)
+Traceback (most recent call last):
+ValueError: hola2 must be greater than 0
+
+>>> bg.integer_validator("hola3")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+>>> bg.integer_validator("hola4", 4.7)
+Traceback (most recent call last):
+TypeError: hola4 must be an integer
+
+>>> bg.integer_validator("hola5", float('NaN'))
+Traceback (most recent call last):
+TypeError: hola5 must be an integer
+
+>>> bg.integer_validator("hola6", float('inf'))
+Traceback (most recent call last):
+TypeError: hola6 must be an integer
+
+>>> bg.integer_validator("hola7", None)
+Traceback (most recent call last):
+TypeError: hola7 must be an integer
+
+>>> bg.integer_validator("", "")
+Traceback (most recent call last):
+TypeError:  must be an integer
