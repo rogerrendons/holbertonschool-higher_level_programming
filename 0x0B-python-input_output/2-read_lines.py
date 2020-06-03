@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Write a function that reads n lines of
+"""
+    Write a function that reads n lines of
     a text file (UTF8) and prints it to stdout
 """
 
