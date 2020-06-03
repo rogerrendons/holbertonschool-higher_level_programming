@@ -9,4 +9,4 @@ import json
 
 def to_json_string(my_obj):
     """ Returns JSON Rep Object """
-    return (json.dumps(my_obj, sort_keys=True))
+    return (json.dumps(my_obj, sort_keys=True, ensure_ascii=False))
