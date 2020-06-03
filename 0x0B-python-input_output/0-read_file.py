@@ -3,6 +3,6 @@
 
 
 def read_file(filename=""):
-    """ Functionthat reads a text file and prints to stdout """
+    """ Read text file and prints """
     with open(filename, mode="r", encoding='utf-8') as myfile:
         print(myfile.read(), end="")

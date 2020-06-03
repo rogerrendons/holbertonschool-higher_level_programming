@@ -3,6 +3,7 @@
 
 
 def number_of_lines(filename=""):
+    """ Counter lines """
     Counter = 0
     with open(filename, mode="r", encoding='utf-8') as file:
         for _ in file:
