@@ -11,7 +11,7 @@ def read_lines(filename="", nb_lines=0):
         if nb_lines <= 0:
             print(file.read(), end='')
         else:
-            for line in range(nb_lines):
+            for line in file:
                 if (Counter < nb_lines):
                     print(line, end="")
                     Counter += 1
