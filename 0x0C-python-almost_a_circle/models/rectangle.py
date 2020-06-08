@@ -104,3 +104,16 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ Dictionary of rectangle """
         return {"x": self.__x, "y": self.__y, "id": self.id, "height": self.__height, "width": self.__width,}
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ JSON string write to a file """
+        with open(cls.__name__ + '.json', mode='w', encoding='utf-8') as file:
+            listres = []
+            if (list_objs):
+                for rec in list_objs:
+                    listres.append(rec.to_dictionary())
+                listres = cls.to_json_string(listres)
+                file.write(listres)
+            else:
+                file.write('[]')
