@@ -19,13 +19,24 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ return atributes in dictionary """
-        # from models.rectangle import Rectangle
-        # from models.square import Square
         if cls.__name__ == "Rectangle":
             figure = cls(16, 7)
         elif cls.__name__ == "Square":
             figure = cls(7)
         return (figure.update(**dictionary))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ Saves a string to a file """
+        with open(cls.__name__ + '.json', mode='w', encoding='utf-8') as file:
+            lst = []
+            if (list_objs):
+                for rec in list_objs:
+                    lst.append(rec.to_dictionary())
+                lst = cls.to_json_string(lst)
+                file.write(lst)
+            else:
+                file.write('[]')
 
     @classmethod
     def load_from_file(cls):
