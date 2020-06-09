@@ -22,8 +22,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ Representation of square figure return """
-        return ("[Square] ({}) {:d}/{:d} - {:d}".format(
-            self.id, self.__x, self.__y, self.___width))
+        return "[Square] ({}) {}/{} - {}".format(
+                self.id, self.x, self.y, self.size)
 
     def update(self, *args, **kwargs):
         """ Object update specified values """
