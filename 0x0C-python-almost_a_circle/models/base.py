@@ -23,7 +23,8 @@ class Base:
             figure = cls(16, 7)
         elif cls.__name__ == "Square":
             figure = cls(7)
-        return (figure.update(**dictionary))
+        figure.update(**dictionary)
+        return (figure)
 
     @classmethod
     def save_to_file(cls, list_objs):
