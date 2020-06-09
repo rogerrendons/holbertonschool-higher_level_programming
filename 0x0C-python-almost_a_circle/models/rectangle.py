@@ -88,14 +88,6 @@ class Rectangle(Base):
                                                                 self.__width,
                                                                 self.__height))
 
-        # thestr = "[{:s}] ({:s}) {:d}/{:d} - ".\
-        #          format(type(self).__name__, str(self.id), self.x, self.y)
-        # if (type(self) == Rectangle):
-        #     thestr += "{:d}/{:d}".format(self.width, self.height)
-        # else:
-        #     thestr += "{:d}".format(self.width)
-        # return thestr
-
     def update(self, *args, **kwargs):
         """ Object update specified values """
         leng = len(args)
