@@ -88,7 +88,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ Object update specified values """
         leng = len(args)
-        if ((args and leng < 6) and (args[0] != None) and (args[0] != "")):
+        if ((args and leng < 6) and (args[0] is not None) and (args[0] != "")):
             try:
                 self.id = args[0]
                 self.__width = args[1]
@@ -97,13 +97,15 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 return
+            return
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
     def to_dictionary(self):
         """ Dictionary of rectangle """
-        return {"x": self.__x, "y": self.__y, "id": self.id, "height": self.__height, "width": self.__width,}
+        return {"x": self.__x, "y": self.__y, "id": self.id, "hei\
+ght": self.__height, "width": self.__width}
 
     @classmethod
     def save_to_file(cls, list_objs):

@@ -22,13 +22,13 @@ class Square(Rectangle):
 
     def __str__(self):
         """ Representation of square figure return """
-        return ("[Square] ({}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y, self.width))
-
+        return ("[Square] ({}) {:d}/{:d} - {:d}\
+            ".format(self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """ Object update specified values """
         leng = len(args)
-        if ((args and leng < 5) and (args[0] != None) and (args[0] != "")):
+        if ((args and leng < 5) and (args[0] is not None) and (args[0] != "")):
             try:
                 self.id = args[0]
                 self.size = args[1]
@@ -36,6 +36,7 @@ class Square(Rectangle):
                 self.y = args[3]
             except IndexError:
                 return
+            return
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)

@@ -47,7 +47,8 @@ class Base:
         """ load from a file an object """
         load = []
         try:
-            with open(cls.__name__ + '.json', mode='r', encoding='utf-8') as file:
+            with open(cls.__name__ + '.json', mode='r', encoding='utf-8') as\
+                 file:
                 listres = json.dumps(json.load(file))
         except FileNotFoundError:
             return load
