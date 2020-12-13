@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""
+""" MODEL
 """
 
 from sys import argv
