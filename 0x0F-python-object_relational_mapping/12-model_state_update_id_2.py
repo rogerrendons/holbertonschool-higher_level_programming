@@ -12,11 +12,10 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
                             argv[1], argv[2], argv[3]))
     Base.metadata.create_all(engine)
+
     session = Session(engine)
 
-    q = session.query(State).filter(State.id == 2)
-    record = q.one()
-    record.name = 'New Mexico'
-    session.flush()
+    for state in session.query(State).filter_by(id=2):
+        state.name = "New Mexico"
     session.commit()
     session.close()
