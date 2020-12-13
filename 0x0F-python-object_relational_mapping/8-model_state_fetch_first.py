@@ -14,7 +14,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    session = Session(engine)
+    session = Session()
     data = session.query(State).first()
 
     if data:
