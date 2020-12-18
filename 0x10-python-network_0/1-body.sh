@@ -1,3 +1,3 @@
 #!/bin/bash
-# Get URL, send GET request show display response body.
-curl -Ls "$1"
+# Get URL send GET request show display response
+curl -sL "$1"
