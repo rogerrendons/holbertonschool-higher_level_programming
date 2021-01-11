@@ -8,4 +8,4 @@ if __name__ == "__main__":
     Mail1 = sys.argv[1]
     Mail2 = {"email": sys.argv[2]}
     Result = requests.post(Mail1, Mail2)
-    print(Result)
+    print(Result.text)
