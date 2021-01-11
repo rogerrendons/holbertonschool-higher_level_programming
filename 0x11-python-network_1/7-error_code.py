@@ -5,7 +5,7 @@ import requests
 
 if __name__ == "__main__":
 
-    Var = requests.get(argv[1])
+    Var = requests.get(sys.argv[1])
     if Var.status_code >= 400:
         print("Error code: {}".format(Var.status_code))
     else:
