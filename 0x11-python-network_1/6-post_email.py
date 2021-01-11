@@ -5,7 +5,4 @@ if __name__ == "__main__":
     import sys
     import requests
 
-    Mail1 = sys.argv[1]
-    Mail2 = {"email": sys.argv[2]}
-    Result = requests.post(Mail1, Mail2)
-    print(Result.text)
+    print((requests.post(sys.argv[1], {"email": sys.argv[2]})).text)
