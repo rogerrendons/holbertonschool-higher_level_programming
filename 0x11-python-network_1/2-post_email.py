@@ -1,4 +1,4 @@
-#!/usr/bin/python3                                                                
+#!/usr/bin/python3
 """ Python Script Send POST Request """
 
 if __name__ == "__main__":
