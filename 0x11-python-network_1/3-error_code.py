@@ -1,15 +1,15 @@
-#!/usr/bin/python3
-"""
-Script sends a request to URL and displays
-the body of the response (decoded in utf-8)
-"""
+#!/usr/bin/python3                                                                
+""" Write a Python script that takes in a URL, sends a                            
+request to the URL and displays the body of the                                   
+response (decoded in utf-8)."""
+
+import sys
+from urllib import request, error
 
 if __name__ == "__main__":
-    import urllib
-    import sys
 
     try:
-        with urllib.request.urlopen(sys.argv[1]) as resp:
-            print(resp.read().decode())
-    except urllib.error.HTTPError as e:
-        print("Error code:", e.code)
+        with request.urlopen(sys.argv[1]) as response:
+            print(response.read().decode('utf-8'))
+    except error.HTTPError as e:
+        print("Error code: ",e.code)
