@@ -5,11 +5,11 @@ response (decoded in utf-8)."""
 
 if __name__ == "__main__":
     import sys
-    from urllib import request, parse, error
+    from urllib import request, parse
 
     try:
         with request.urlopen(sys.argv[1]) as response:
-            url = response.read().decode('utf-8')
-            print(url)
-    except error.HTTPError as errorurl:
-            print("Error code: {}".format(errorurl.code))
+            print(response.read().decode('utf-8'))
+
+    except urllib.error.URLError as errorurl:
+        print("Error code: {}".format(errorurl.code))
