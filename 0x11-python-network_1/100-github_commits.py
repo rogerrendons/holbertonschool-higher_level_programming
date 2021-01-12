@@ -13,10 +13,10 @@ if __name__ == "__main__":
         .format(sys.argv[2], sys.argv[1])
     ReqAll = requests.get(GetURL)
     Res = ReqAll.json()
-    # try:
-    for x in range(10):
-        print("{}: {}".format(
-            Res[x].get("sha"),
-            Res[x].get("commit").get("author").get("name")))
-    # except:
-    #     pass
+    try:
+        for x in range(10):
+            print("{}: {}".format(
+                Res[x].get("sha"),
+                Res[x].get("commit").get("author").get("name")))
+    except:
+        pass
