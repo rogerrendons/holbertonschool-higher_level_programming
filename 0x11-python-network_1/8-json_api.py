@@ -12,7 +12,8 @@ if __name__ == '__main__':
         q = sys.argv[1]
 
     try:
-        result = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
+        result = requests.post(
+            'http://0.0.0.0:5000/search_user', data={'q': q})
         result.json()
         if 'id' in result and 'name' in result:
             print('[{}] {}'.format(result['id'], result['name']))
