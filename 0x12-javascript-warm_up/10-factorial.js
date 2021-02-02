@@ -1,5 +1,5 @@
 #!/usr/bin/node
-
+// TASK
 function factorial (Numb) {
   const num = Number(Numb);
   if (isNaN(num) === true | num === 1) {
