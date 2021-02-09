@@ -11,7 +11,7 @@ request(args[2], function (err, resp, body) {
     const films = JSON.parse(body).results;
     for (const List in films) {
       for (const Charac in films[List].characters) {
-        if (films[List].characters[Charac] === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (films[List].characters[Charac] === 'https://swapi-api.hbtn.io/api/people/' + '18' + '/') {
           Acum++;
         }
       }
