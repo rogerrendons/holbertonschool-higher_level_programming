@@ -11,5 +11,5 @@
 
 Higher-level programming - Python.  
 Higher-level programming - JavaScript.  
-Higher-level programming - Databases.  
+Higher-level programming - MySQL.  
 Higher-level programming - AirBnB clone.  
